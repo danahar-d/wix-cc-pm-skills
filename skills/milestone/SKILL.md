@@ -47,16 +47,7 @@ Once you have what you need, produce the full milestone document in this exact s
 Milestone #[N]: [Milestone Name]
 Deadline: [Date]
 
----
-
 TL;DR — Overview | Full milestone details below
-
-[Effort 1 Name]
-• [Bold key term] — explanation
-• [Bold key term] — explanation
-
-[Effort 2 Name] (if applicable)
-• ...
 
 ---
 
@@ -70,10 +61,6 @@ What M[N-1] Delivered
 
 What M[N] Is About
 [2–4 sentences: what shifts, what this milestone proves or closes]
-
-Two parallel efforts run simultaneously: (or "One effort:" if single)
-[Effort 1 Name]: [one-sentence description]
-[Effort 2 Name]: [one-sentence description]
 
 ---
 
