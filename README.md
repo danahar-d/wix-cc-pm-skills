@@ -12,7 +12,7 @@ Ask Dana to invite you as a collaborator on GitHub.
 **2. Connect the skills to your Claude Code**
 In any Claude Code session, run:
 ```
-/ck-utility-references add https://github.com/danahar-d/wix-pm-skills.git
+/ck-utility-references add https://github.com/danahar-d/wix-cc-pm-skills.git
 ```
 
 Done. All skills in this repo are now available as slash commands in every project you work on.
@@ -29,7 +29,7 @@ See [SKILLS.md](SKILLS.md) for the full list — it updates automatically whenev
 
 1. Clone this repo (one time):
    ```
-   git clone https://github.com/danahar-d/wix-pm-skills.git
+   git clone https://github.com/danahar-d/wix-cc-pm-skills.git
    ```
 
 2. Create a folder under `skills/` — the folder name becomes the slash command:
