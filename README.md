@@ -1,38 +1,53 @@
 # wix-pm-skills
 
-Shared Claude Code skills for the Wix PM team.
+Shared Claude Code skills for the Wix PM team. Add once, use everywhere.
 
-## What's this
+---
 
-A collection of slash commands that help us move faster on recurring PM work — writing specs, preparing stakeholder updates, running sprint planning, and more.
+## Setup — do this once
 
-## How to add these skills to your Claude Code
+**1. Get added to the repo**
+Ask Dana to invite you as a collaborator on GitHub.
 
+**2. Connect the skills to your Claude Code**
+In any Claude Code session, run:
 ```
 /ck-utility-references add https://github.com/danahar-d/wix-pm-skills.git
 ```
 
-After that, all skills in this repo are available as slash commands (e.g. `/write-spec`, `/stakeholder-update`).
+Done. All skills in this repo are now available as slash commands in every project you work on.
 
-## Skills
-
-| Command | What it does |
-|---|---|
-| _(coming soon)_ | |
-
-## Contributing a new skill
-
-1. Create a folder under `skills/` — the folder name becomes the slash command
-2. Add a `SKILL.md` file with instructions for Claude
-3. Open a PR, get one teammate to review
-4. Update the table above
-
-### SKILL.md template
-
-```markdown
----
-description: One-line description of what the skill does
 ---
 
-[Your instructions for Claude here]
-```
+## Available skills
+
+See [SKILLS.md](SKILLS.md) for the full list — it updates automatically whenever a new skill is added.
+
+---
+
+## Add a new skill
+
+1. Clone this repo (one time):
+   ```
+   git clone https://github.com/danahar-d/wix-pm-skills.git
+   ```
+
+2. Create a folder under `skills/` — the folder name becomes the slash command:
+   ```
+   mkdir skills/my-skill-name
+   ```
+
+3. Copy the template and fill it in:
+   ```
+   cp SKILL_TEMPLATE.md skills/my-skill-name/SKILL.md
+   ```
+
+4. Open a PR → get one teammate to review → merge.
+
+The [SKILLS.md](SKILLS.md) index updates automatically on merge.
+
+---
+
+## Questions?
+
+Ping Dana.

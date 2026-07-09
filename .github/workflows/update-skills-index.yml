@@ -1,0 +1,44 @@
+name: Update Skills Index
+
+on:
+  push:
+    paths:
+      - 'skills/**/SKILL.md'
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  update-index:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Generate SKILLS.md
+        run: |
+          echo "# Skills Index" > SKILLS.md
+          echo "" >> SKILLS.md
+          echo "Auto-generated from all skills in this repo. Do not edit manually." >> SKILLS.md
+          echo "" >> SKILLS.md
+          echo "| Command | Description | Author |" >> SKILLS.md
+          echo "|---|---|---|" >> SKILLS.md
+
+          for skill_file in skills/*/SKILL.md; do
+            skill_name=$(basename $(dirname "$skill_file"))
+            description=$(grep -m1 '^description:' "$skill_file" | sed 's/description: *//' | tr -d '"')
+            author=$(grep -m1 '^author:' "$skill_file" | sed 's/author: *//' | tr -d '"')
+            echo "| \`/$skill_name\` | $description | $author |" >> SKILLS.md
+          done
+
+          echo "" >> SKILLS.md
+          echo "---" >> SKILLS.md
+          echo "_Last updated: $(date -u '+%Y-%m-%d %H:%M UTC')_" >> SKILLS.md
+
+      - name: Commit if changed
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add SKILLS.md
+          git diff --cached --quiet || git commit -m "chore: update skills index"
+          git push
