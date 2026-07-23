@@ -4,7 +4,7 @@ Auto-generated from all skills in this repo. Do not edit manually.
 
 | Command | Description | Author |
 |---|---|---|
-| `/milestone` | Generate a structured milestone doc by asking the right questions and filling in a proven template | Dana Harel |
+| `/milestone` | Generate a structured milestone doc from any project context — paste docs, notes, or describe your project and get a complete milestone | Dana Harel |
 
 ---
-_Last updated: 2026-07-09 14:52 UTC_
+_Last updated: 2026-07-23 13:20 UTC_
